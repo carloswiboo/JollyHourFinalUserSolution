@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 
 export default function MainPageComponent() {
   return (
