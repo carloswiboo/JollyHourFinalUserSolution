@@ -6,6 +6,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import MainPageComponent from './src/screens/MainPageComponent';
 import LoginComponent from './src/screens/LoginComponent';
 import CategoriesSelectComponent from './src/screens/CategoriesSelectComponent';
+import TabsComponent from './src/templates/tabs/TabsComponent';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -29,6 +30,11 @@ export default function App() {
           <Stack.Screen
             name="MainPageComponent"
             component={MainPageComponent}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="TabsComponent"
+            component={TabsComponent}
             options={{headerShown: false}}
           />
         </Stack.Navigator>

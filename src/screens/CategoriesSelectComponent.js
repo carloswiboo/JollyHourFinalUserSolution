@@ -119,12 +119,12 @@ export default function CategoriesSelectComponent({navigation}) {
             buttonStyle={styles.buttonOmit}
             type="outline"
             title="Omitir"
-            onPress={() => navigation.navigate('MainPageComponent')}
+            onPress={() => navigation.navigate('TabsComponent')}
           />
           <Button
             buttonStyle={styles.buttonNext}
             title="Siguiente"
-            onPress={() => navigation.navigate('MainPageComponent')}
+            onPress={() => navigation.navigate('TabsComponent')}
           />
         </View>
       </LinearGradient>
