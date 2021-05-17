@@ -22,7 +22,7 @@ export default function CardComponent({navigation}) {
     <View style={styles.container}>
       <TouchableOpacity
         style={styles.companyData}
-        onPress={() => navigation.navigate('businessProfile')}>
+        onPress={() => navigation.navigate('BusinessProfileComponent')}>
         <Image
           style={styles.imgCompany}
           source={{
@@ -48,11 +48,16 @@ export default function CardComponent({navigation}) {
           <Text style={styles.textTerms}>
             Aplica solamente en la hamburguesa, no combos.
           </Text>
+          <TouchableOpacity
+            style={styles.buttonDetail}
+            onPress={() => navigation.navigate('PromotionDetailComponent')}>
+            <Text
+              style={{color: 'black', textAlign: 'center', fontWeight: 'bold'}}>
+              {' '}
+              Darle
+            </Text>
+          </TouchableOpacity>
         </View>
-        <Button
-          title="Go to Details"
-          onPress={() => navigation.navigate('promotionDetail')}
-        />
       </ImageBackground>
     </View>
   );
@@ -72,7 +77,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: 30,
+    fontSize: 28,
     fontWeight: 'bold',
     textAlign: 'left',
     borderRadius: borderRadiusNumber,
@@ -136,5 +141,13 @@ const styles = StyleSheet.create({
   promotionDescription: {
     paddingVertical: 60,
     paddingHorizontal: 20,
+    paddingBottom: 30,
+  },
+  buttonDetail: {
+    backgroundColor: '#ffBC00',
+    padding: 10,
+    marginTop: 15,
+    borderRadius: 50,
+    textAlign: 'center',
   },
 });

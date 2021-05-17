@@ -47,7 +47,7 @@ const CategoryListComponent = () => {
           fontWeight: 'bold',
           color: 'white',
           marginLeft: 20,
-          marginTop: 10,
+          marginTop: 0,
         }}>
         Categorías
       </Text>

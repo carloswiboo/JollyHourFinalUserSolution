@@ -1,8 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, ScrollView, SafeAreaView} from 'react-native';
 import ItemNotificationComponent from '../components/ItemNotificationComponent';
 import LinearGradient from 'react-native-linear-gradient';
-export default function NotificationsComponent() {
+import HeaderInicioComponent from '../templates/HeaderInicioComponent';
+
+import {Divider} from 'react-native-elements';
+export default function NotificationsComponent({navigation}) {
   const list = [
     {
       id: 1,
@@ -74,14 +77,18 @@ export default function NotificationsComponent() {
 
   return (
     <>
-    <LinearGradient
-      style={styles.loginBackground}
-      colors={['#3F5EFB', '#FC466B']}
-      start={{x: 0.0, y: 0.25}}
-      end={{x: 0.5, y: 1.0}}>
-<Text style={styles.titleView}> Notificaciones </Text>
-      </LinearGradient>
-      
+      <SafeAreaView style={{width: '100%', flex: 1, backgroundColor: 'black'}}>
+        <View>
+          <Text style={styles.titulo}>Mis Jolly's</Text>
+          <Text style={styles.subtitulo}>
+            Texto para poner de descripción de los Jollys
+          </Text>
+        </View>
+        <Divider style={{backgroundColor: 'rgba(255,255,255,.4)'}} />
+        <ScrollView style={styles.root}>
+          <ItemNotificationComponent notificationsList={list} />
+        </ScrollView>
+      </SafeAreaView>
       <ScrollView style={styles.root}>
         <ItemNotificationComponent notificationsList={list} />
       </ScrollView>

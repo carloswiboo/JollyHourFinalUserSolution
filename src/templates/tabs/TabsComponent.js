@@ -4,6 +4,9 @@ import {createMaterialBottomTabNavigator} from '@react-navigation/material-botto
 import {createStackNavigator} from '@react-navigation/stack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MainPageComponent from '../../screens/MainPageComponent';
+import NotificationsComponent from '../../screens/NotificationsComponent';
+import ProfileComponent from '../../screens/ProfileComponent';
+import MyJollyComponent from '../../screens/MyJollyComponent';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -29,23 +32,23 @@ export default function TabsComponent({navigation}) {
           ),
         }}
       />
-      <Tab.Screen
+      {/*<Tab.Screen
         labeled={true}
         name="Buscar"
         component={MainPageComponent}
         navigation={navigation}
         options={{
-          tabBarLabel: 'Inicio',
+          tabBarLabel: 'Buscar',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="search-web" color={color} size={22} />
           ),
         }}
-      />
+      />*/}
       <Tab.Screen
         name="Mis Promociones"
-        component={MainPageComponent}
+        component={MyJollyComponent}
         options={{
-          tabBarLabel: 'Mi Jolly',
+          tabBarLabel: "Mis Jolly's",
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="heart" color={color} size={22} />
           ),
@@ -53,7 +56,7 @@ export default function TabsComponent({navigation}) {
       />
       <Tab.Screen
         name="Notificaciones"
-        component={MainPageComponent}
+        component={NotificationsComponent}
         options={{
           tabBarLabel: 'Notificaciones',
           tabBarIcon: ({color}) => (
@@ -63,7 +66,7 @@ export default function TabsComponent({navigation}) {
       />
       <Tab.Screen
         name="Perfil"
-        component={MainPageComponent}
+        component={ProfileComponent}
         options={{
           tabBarLabel: 'Perfil',
           tabBarIcon: ({color}) => (
